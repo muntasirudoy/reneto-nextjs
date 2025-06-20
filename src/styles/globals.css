@@ -8,20 +8,20 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Sporting Grotesque';
+  src: url('/fonts/SportingGrotesque-Regular.woff') format('woff');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components{
+ 
+  .highlight {
+    @apply bg-black inline-flex items-center pt-2 text-white rounded-lg px-2 
+  }
+  .section-icon-action{
+    @apply rounded-full text-white bg-black border-[2px] border-white
+  }
+  .section-title{
+    @apply max-w-[400px] bg-white/90 font-bold text-5xl
+  }
 }

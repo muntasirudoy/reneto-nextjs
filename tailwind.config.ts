@@ -1,20 +1,38 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1200px",
+        xl: "1100px",
+        lg: "1024px",
+        md: "768px",
+        sm: "640px",
+      },
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sporting: ['"Sporting Grotesque"', "sans-serif"],
+      },
+      colors: {
+        primary: {
+          DEFAULT: "#C5FF41",
+          light: "#C5FFEE",
+        },
+        secondary: {
+          DEFAULT: "#000000",
+        },
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
